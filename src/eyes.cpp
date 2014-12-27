@@ -38,6 +38,17 @@ imshow("channels_g",channels[1]);
 namedWindow("channels_r", WINDOW_NORMAL);
 imshow("channels_r",channels[2]);
 waitKey(0);
+
+Mat color1(2,2, CV_8UC3, Scalar(0,0,255));
+Mat color2(2,2, CV_8UC3, Scalar(0,255,0));
+Mat color3(2,2, CV_8UC3, Scalar(255,0,0));
+
+Mat hsv1,hsv2,hsv3;
+
+cvtColor(color1,hsv1,CV_BGR2HSV);
+cvtColor(color2,hsv2,CV_BGR2HSV);
+cvtColor(color3,hsv3,CV_BGR2HSV);
+cout<<hsv1<<"\n"<<hsv2<<"\n"<<hsv3<<"\n";
 }
 return 0;
 }
