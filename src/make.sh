@@ -1,6 +1,11 @@
 
 #!/bin/bash
-for i in `seq 1 1000`;
+
+dir=$(pwd)
+slash='/'
+for i in `seq 1 999`;
 do
-    echo exists$i.jpg>>text.txt
+	file=try$i.jpg
+	name=$dir$slash$file
+    echo $name>>text.txt 
 done 
